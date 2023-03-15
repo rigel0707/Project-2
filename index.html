@@ -13,6 +13,7 @@
   <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.ico" />
   <script src="https://kit.fontawesome.com/c4cd33bb95.js" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -163,136 +164,152 @@
     <div class="overlay--mid p-absolute"></div>
   </div>
 
-  <!-- Converter -->
+  <!-- Converter Tab -->
   <div class="container">
-    <div class="row justify-content-center p-2">
-      <h1 class="title pb-2 col-12 text-center">
-        <strong>Currency Converter</strong>
-      </h1>
-      <div class="title-border col-12"></div>
-    </div>
-    <div class="container">
-      <div class="row unit-converter-container justify-content-center rounded p-5">
-        <div class="form-group col-12">
-          <div class="d-flex align-items-center mb-5">
-            <select class="form-control" id="from-currency-select"></select>
-          </div>
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">Convert</span>
-            <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
-              aria-describedby="addon-wrapping" id="amount">
-          </div>
-          <script>
-            $(function () {
-              $("#from-currency-select").select2();
-            });
-          </script>
-        </div>
-
-        <div></div>
-        <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="convert">
-          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-          <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
-            style="width:50px;height:50px">
-          </lord-icon>
-        </button>
-
-        <div class="col-12">
-          <div class="form-group">
-            <div class="d-flex align-items-center mb-5">
-              <select class="form-control" name="" id="to-currency-select"></select>
+    <ul class="nav nav-pills nav-fill" id="converterTab">
+        <li class="nav-item">
+            <a href="#currency" class="nav-link active" data-bs-toggle="tab">Currency Converter</a>
+        </li>
+        <li class="nav-item">
+            <a href="#cryptocurrency" class="nav-link" data-bs-toggle="tab">Cryptocurrency Converter</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="currency">
+            <!-- Converter -->
+            <div class="container">
+            <div class="row justify-content-center p-2">
+              <h1 class="title pb-2 col-12 text-center">
+                <strong>Currency Converter</strong>
+              </h1>
+              <div class="title-border col-12"></div>
             </div>
-            <script>
-              $(function () {
-                $("#to-currency-select").select2();
-              });
-            </script>
-          </div>
-        </div>
-        <div class="unitprice d-flex justify-content-between align-items-center">
-          <h3 class="pb-2"><strong id="result">0</strong></h3>
-          <h5 id="second-rate-unit"></h5>
-        </div>
-        <div class="textBelow" id="first-rate-unit">converted price</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Crypto Converter -->
-  <div class="container">
-    <div class="row justify-content-center p-2">
-      <h1 class="title pb-2 col-12 text-center">
-        <strong>Cryptocurrency Converter</strong>
-      </h1>
-      <div class="title-border col-12"></div>
-    </div>
-    <div class="container">
-      <div class="row unit-converter-container justify-content-center rounded p-5">
-        <div class="form-group col-12">
-          <div class="d-flex align-items-center mb-5">
-            <select class="form-control" id="from-cryptocurrency-select">
-                <option value="btc-bitcoin">BTC - Bitcoin</option>
-                <option value="eth-ethereum">ETH - Ethereum</option>
-                <option value="usdt-tether">USDT - Tether</option>
-                <option value="bnb-binance-coin">BNB - Binance Coin</option>
-                <option value="usdc-usd-coin">USDC - USD Coin</option>
-                <option value="xrp-xrp">XRP - Ripple</option>
-                <option value="ada-cardano">ADA - Cardano</option>
-                <option value="matic-polygon">MATIC - Polygon</option>
-                <option value="sol-solana">SOL - Solana</option>
-                <option value="doge-dogecoin">DOGE - Dogecoin</option>
-              </select>
-            </select>
-          </div>
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">Convert</span>
-            <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
-              aria-describedby="addon-wrapping" id="crypto-amount">
-          </div>
-          <script>
-            $(function () {
-              $("#from-currency-select").select2();
-            });
-          </script>
-        </div>
-
-        <div></div>
-        <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="cryptoconvert">
-          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-          <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
-            style="width:50px;height:50px">
-          </lord-icon>
-        </button>
-
-        <div class="col-12">
-          <div class="form-group">
-            <div class="d-flex align-items-center mb-5">
-              <select class="form-control" name="" id="to-cryptocurrency-select">
-                <option value="btc-bitcoin">BTC - Bitcoin</option>
-                <option value="eth-ethereum">ETH - Ethereum</option>
-                <option value="usdt-tether">USDT - Tether</option>
-                <option value="bnb-binance-coin">BNB - Binance Coin</option>
-                <option value="usdc-usd-coin">USDC - USD Coin</option>
-                <option value="xrp-xrp">XRP - Ripple</option>
-                <option value="ada-cardano">ADA - Cardano</option>
-                <option value="matic-polygon">MATIC - Polygon</option>
-                <option value="sol-solana">SOL - Solana</option>
-                <option value="doge-dogecoin">DOGE - Dogecoin</option>
-              </select>
+            <div class="container">
+              <div class="row unit-converter-container justify-content-center rounded p-5">
+                <div class="form-group col-12">
+                  <div class="d-flex align-items-center mb-5">
+                    <select class="form-control" id="from-currency-select"></select>
+                  </div>
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Convert</span>
+                    <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
+                      aria-describedby="addon-wrapping" id="amount">
+                  </div>
+                  <script>
+                    $(function () {
+                      $("#from-currency-select").select2();
+                    });
+                  </script>
+                </div>
+        
+                <div></div>
+                <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="convert">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
+                    style="width:50px;height:50px">
+                  </lord-icon>
+                </button>
+        
+                <div class="col-12">
+                  <div class="form-group">
+                    <div class="d-flex align-items-center mb-5">
+                      <select class="form-control" name="" id="to-currency-select"></select>
+                    </div>
+                    <script>
+                      $(function () {
+                        $("#to-currency-select").select2();
+                      });
+                    </script>
+                  </div>
+                </div>
+                <div class="unitprice d-flex justify-content-between align-items-center">
+                  <h3 class="pb-2"><strong id="result"></strong></h3>
+                  <h5 id="second-rate-unit"></h5>
+                </div>
+                <div class="textBelow" id="first-rate-unit"></div>
+              </div>
             </div>
-            <script>
-              $(function () {
-                $("#to-currency-select").select2();
-              });
-            </script>
           </div>
         </div>
-        <div class="unitprice d-flex justify-content-between align-items-center">
-          <h3 class="pb-2"><strong id="cryptoresult">0</strong></h3>
-          <h5 id="cryptoresultunit"></h5>
+        <div class="tab-pane fade" id="cryptocurrency" >  
+            <!-- Crypto Converter -->
+            <div class="container">
+                <div class="row justify-content-center p-2">
+                <h1 class="title pb-2 col-12 text-center">
+                    <strong>Cryptocurrency Converter</strong>
+                </h1>
+                <div class="title-border col-12"></div>
+                </div>
+                <div class="container">
+                <div class="row unit-converter-container justify-content-center rounded p-5">
+                    <div class="form-group col-12">
+                    <div class="d-flex align-items-center mb-5">
+                        <select class="form-control" id="from-cryptocurrency-select">
+                            <option value="btc-bitcoin">BTC - Bitcoin</option>
+                            <option value="eth-ethereum">ETH - Ethereum</option>
+                            <option value="usdt-tether">USDT - Tether</option>
+                            <option value="bnb-binance-coin">BNB - Binance Coin</option>
+                            <option value="usdc-usd-coin">USDC - USD Coin</option>
+                            <option value="xrp-xrp">XRP - Ripple</option>
+                            <option value="ada-cardano">ADA - Cardano</option>
+                            <option value="matic-polygon">MATIC - Polygon</option>
+                            <option value="sol-solana">SOL - Solana</option>
+                            <option value="doge-dogecoin">DOGE - Dogecoin</option>
+                        </select>
+                        </select>
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">Convert</span>
+                        <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
+                        aria-describedby="addon-wrapping" id="crypto-amount">
+                    </div>
+                    <script>
+                        $(function () {
+                        $("#from-currency-select").select2();
+                        });
+                    </script>
+                    </div>
+
+                    <div></div>
+                    <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="cryptoconvert">
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
+                        style="width:50px;height:50px">
+                    </lord-icon>
+                    </button>
+
+                    <div class="col-12">
+                    <div class="form-group">
+                        <div class="d-flex align-items-center mb-5">
+                        <select class="form-control" name="" id="to-cryptocurrency-select">
+                            <option value="btc-bitcoin">BTC - Bitcoin</option>
+                            <option value="eth-ethereum">ETH - Ethereum</option>
+                            <option value="usdt-tether">USDT - Tether</option>
+                            <option value="bnb-binance-coin">BNB - Binance Coin</option>
+                            <option value="usdc-usd-coin">USDC - USD Coin</option>
+                            <option value="xrp-xrp">XRP - Ripple</option>
+                            <option value="ada-cardano">ADA - Cardano</option>
+                            <option value="matic-polygon">MATIC - Polygon</option>
+                            <option value="sol-solana">SOL - Solana</option>
+                            <option value="doge-dogecoin">DOGE - Dogecoin</option>
+                        </select>
+                        </div>
+                        <script>
+                        $(function () {
+                            $("#to-currency-select").select2();
+                        });
+                        </script>
+                    </div>
+                    </div>
+                    <div class="unitprice d-flex justify-content-between align-items-center">
+                    <h3 class="pb-2"><strong id="cryptoresult"></strong></h3>
+                    <h5 id="cryptoresultunit"></h5>
+                    </div>
+                    <div class="textBelow" id="crypto-rate"></div>
+                </div>
+                </div>
+            </div>
         </div>
-        <div class="textBelow" id="crypto-rate">converted price</div>
-      </div>
     </div>
   </div>
 
@@ -426,6 +443,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="currency.js"></script>
   <script src="cryptocurrency.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     window.onscroll = () => {
       const navbar = document.querySelector("#navbar");
