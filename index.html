@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JARR</title>
+  <title>JARR Exchange</title>
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -167,7 +167,7 @@
   <div class="container">
     <div class="row justify-content-center p-2">
       <h1 class="title pb-2 col-12 text-center">
-        <strong>Converter</strong>
+        <strong>Currency Converter</strong>
       </h1>
       <div class="title-border col-12"></div>
     </div>
@@ -215,53 +215,84 @@
         </div>
         <div class="textBelow" id="first-rate-unit">converted price</div>
       </div>
-      <script>
-        const convertB = document.getElementById('convert')
-        convertB.addEventListener('click', convert)
+    </div>
+  </div>
 
-        const host = 'api.frankfurter.app'
+  <!-- Crypto Converter -->
+  <div class="container">
+    <div class="row justify-content-center p-2">
+      <h1 class="title pb-2 col-12 text-center">
+        <strong>Cryptocurrency Converter</strong>
+      </h1>
+      <div class="title-border col-12"></div>
+    </div>
+    <div class="container">
+      <div class="row unit-converter-container justify-content-center rounded p-5">
+        <div class="form-group col-12">
+          <div class="d-flex align-items-center mb-5">
+            <select class="form-control" id="from-cryptocurrency-select">
+                <option value="btc-bitcoin">BTC - Bitcoin</option>
+                <option value="eth-ethereum">ETH - Ethereum</option>
+                <option value="usdt-tether">USDT - Tether</option>
+                <option value="bnb-binance-coin">BNB - Binance Coin</option>
+                <option value="usdc-usd-coin">USDC - USD Coin</option>
+                <option value="xrp-xrp">XRP - Ripple</option>
+                <option value="ada-cardano">ADA - Cardano</option>
+                <option value="matic-polygon">MATIC - Polygon</option>
+                <option value="sol-solana">SOL - Solana</option>
+                <option value="doge-dogecoin">DOGE - Dogecoin</option>
+              </select>
+            </select>
+          </div>
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Convert</span>
+            <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
+              aria-describedby="addon-wrapping" id="amount">
+          </div>
+          <script>
+            $(function () {
+              $("#from-currency-select").select2();
+            });
+          </script>
+        </div>
 
-        function convert() {
-          const amount = document.getElementById('amount').value
-          const from = document.getElementById('from-currency-select').value
-          const to = document.getElementById('to-currency-select').value
-          fetch(`https://${host}/latest?amount=${amount}&from=${from}&to=${to}`)
-            .then(resp => resp.json())
-            .then((data) => {
-              const convertedRate = data.rates[to]
-              console.log(`${amount} ${from} = ${convertedRate} ${to}`)
-              document.getElementById('result').innerText = convertedRate.toFixed(2)
-            })
+        <div></div>
+        <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="cryptoconvert">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
+            style="width:50px;height:50px">
+          </lord-icon>
+        </button>
 
-          fetch(`https://${host}/latest?amount=1&from=${from}&to=${to}`)
-            .then(resp => resp.json())
-            .then((data) => {
-              const rate = data.rates[to]
-              console.log(`${amount} ${from} = ${rate} ${to}`)
-
-              document.getElementById('first-rate-unit').innerText = `1 ${from} = ${rate} ${to}`
-              document.getElementById('second-rate-unit').innerText = `${to}`
-            })
-        }
-
-        const fromCurrencySelect = document.getElementById('from-currency-select')
-        const toCurrencySelect = document.getElementById('to-currency-select')
-
-        fetch(`https://${host}/currencies`)
-          .then(resp => resp.json())
-          .then((data) => {
-            for (const code in data) {
-              const option = document.createElement('option')
-              option.text = data[code]
-              option.value = code
-              fromCurrencySelect.appendChild(option.cloneNode(true))
-              toCurrencySelect.appendChild(option)
-            }
-          })
-          .catch((error) => {
-            console.log(error)
-          })
-      </script>
+        <div class="col-12">
+          <div class="form-group">
+            <div class="d-flex align-items-center mb-5">
+              <select class="form-control" name="" id="to-cryptocurrency-select">
+                <option value="btc-bitcoin">BTC - Bitcoin</option>
+                <option value="eth-ethereum">ETH - Ethereum</option>
+                <option value="usdt-tether">USDT - Tether</option>
+                <option value="bnb-binance-coin">BNB - Binance Coin</option>
+                <option value="usdc-usd-coin">USDC - USD Coin</option>
+                <option value="xrp-xrp">XRP - Ripple</option>
+                <option value="ada-cardano">ADA - Cardano</option>
+                <option value="matic-polygon">MATIC - Polygon</option>
+                <option value="sol-solana">SOL - Solana</option>
+                <option value="doge-dogecoin">DOGE - Dogecoin</option>
+              </select>
+            </div>
+            <script>
+              $(function () {
+                $("#to-currency-select").select2();
+              });
+            </script>
+          </div>
+        </div>
+        <div class="unitprice d-flex justify-content-between align-items-center">
+          <h3 class="pb-2"><strong id="cryptoresult">0</strong></h3>
+          <h5 id="second-rate-unit"></h5>
+        </div>
+        <div class="textBelow" id="first-rate-unit">converted price</div>
+      </div>
     </div>
   </div>
 
@@ -393,6 +424,8 @@
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="currency.js"></script>
+  <script src="cryptocurrency.js"></script>
   <script>
     window.onscroll = () => {
       const navbar = document.querySelector("#navbar");
