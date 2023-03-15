@@ -1594,3 +1594,41 @@ html {
 .mb-30 {
   margin-bottom: 30px;
 }
+
+/* Converter */
+.background{
+  background-color: #070336;
+}
+
+.title{
+  color: white;
+}   
+
+.title-border{
+  width: 70px !important;
+  border-bottom: 4px solid 
+  #b63488;
+}
+
+.unit-converter-container{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.unitprice{
+  border-bottom: 4px solid 
+  #b63488;
+}
+
+.textBelow{
+  color: rgb(167, 167, 167);
+}
+
+.button-convert{
+  color: white !important;
+  width: 75px !important;
+  height: 75px !important;
+  border-radius: 50% !important;
+  background-color: #07ced4 !important;
+  border-width: 2px !important;
+}
