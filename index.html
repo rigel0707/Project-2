@@ -28,27 +28,35 @@
           <li><a class="link-txt" href="#converter">Converter</a></li>
           <li><a class="link-txt" href="#articles">Articles</a></li>
         </ul>
-        <a href="#" class="btn nav_btn btn-fnt btn-color">Connect Wallet</a>
+        <!-- Connect Button -->
+        <button class="btn button btn-solid connect-wallet" onclick='connectWallet()'>Connect Wallet</button>
+        <div class="dropdown">
+          <button class="btn btn-solid dropdown-toggle dropdown-title" style="display: none;" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+          <ul class="dropdown-menu">
+            <li><a class="wallet-balance"></li>
+            <li><button class="btn btn-solid disconnect-wallet">Disconnect</button></li>
+          </ul>
+        </div>
         <a href="#" class="btn nav_btn--hamburger"><img src="./assets/img/hamburger.svg" alt="hamburger_menu" /></a>
       </div>
     </header>
 
     <section id="hero">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          <div class="column column-lg-6 order-1">
-            <div class="card hero_img p-relative" data-aos="fade-left" data-aos-duration="1000">
-              <div class="p-absolute player_box floating">
+          <div class="col-lg-6 order-lg-1">
+            <div class="card hero_img position-relative" data-aos="fade-left" data-aos-duration="1000">
+              <div class="position-absolute player_box floating">
                 <img class="player" src="./assets/img/hero.png" alt="avatar_player_photo" />
               </div>
-              <div class="no-float p-absolute">
+              <div class="no-float position-absolute">
                 <img src="./assets/img/hero-background.svg" alt="floating_image_background" />
               </div>
               <img class="floating float-img" src="./assets/img/hero-float.png" alt="floating_image_background" />
             </div>
           </div>
-          <div class="column column-lg-6 order-0">
-            <div class="card hero_card-text mgr-s mgr-lg" data-aos="fade-right" data-aos-duration="1000">
+          <div class="col-lg-6 order-lg-0">
+            <div class="card hero_card-text m-lg-5" data-aos="fade-right" data-aos-duration="1000">
               <span class="fnt-xs">Currency and Cryptocurrency Exchange</span>
               <h1 class="h2">Used by millions</h1>
               <h2 class="h3-sub">
@@ -56,187 +64,142 @@
                 Your trusted and secure Currency and Cryptocurrency Exchange.
               </h2>
               <div class="d-flex hero_content_btns">
-                <a class="btn-solid hero_btn btn-fnt hover" href="#">Connect wallet</a>
+                <a class="btn-solid hero_btn btn-fnt hover" onclick='connectWallet()'>Connect wallet</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <div class="overlay top-overlay p-absolute"></div>
-  </div>
+    </section> 
 
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <div class="column column-lg-6 about-half">
-          <div class="card about_img p-relative" data-aos="fade-right" data-aos-duration="1000">
-            <div class="floating">
-              <img class="about_pics" src="./assets/img/left-pic.webp" alt="about_pics" />
-            </div>
-          </div>
-        </div>
-        <div class="column column-lg-6">
-          <div class="card about_card-text mgl-lg" data-aos="fade-left" data-aos-duration="1000">
-            <h2 class="fnt-xs">About Us</h2>
-            <h2 class="h2">
-              We are a global organization serving a global audience
-            </h2>
-            <h3 class="h3-sub">
-              The team of subject matter experts at JARR Exchange delivers
-              reliable and relevant content to both individuals and
-              businesses, driven by the mission to inform global communities
-              about the ever-evolving concept of money in the new digital era.
-            </h3>
-            <p class="prgph">
-              JARR Exchange's Currency and Cryptocurrency Converter determines
-              the exchange rates between major fiat currencies and
-              cryptocurrencies.
-            </p>
-            <div class="about_content_btn">
-              <a class="about_content_btn-main btn-fnt btn btn-color" href="#Converter">Convert Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="mid p-relative">
-    <section id="explore">
+    <section id="about">
       <div class="container">
-        <div class="txt-center section-title" data-aos="fade-up" data-aos-duration="1000">
-          <h2 class="fnt-xs">Services</h2>
-          <h2 class="h2">Explore Our Services</h2>
-          <p class="prgph">We integrate real economy into the digital one.</p>
-        </div>
         <div class="row">
-          <div class="column column-lg-6 column-xl-8">
-            <div class="row" href="#converter">
-              <div class="column column-md-6 column-lg-12" data-aos="fade-up" data-aos-duration="1000">
-                <div class="card card-2 half-card explore_card big-card hover">
-                  <div class="img_box">
-                    <img class="card-img card-img--big" src="./assets/img/service-1.webp" alt="game_image" />
-                  </div>
-                  <div class="card-caption d-flex sp-btwn">
-                    <div class="explore_card-caption-box">
-                      <h2 class="prgph">Service</h2>
-                      <h2 class="mini-h2">Cryptocurrency Converter</h2>
-                    </div>
-                  </div>
-                </div>
+          <div class="col-lg-6">
+            <div class="card about_img position-relative" data-aos="fade-right" data-aos-duration="1000">
+              <div class="floating">
+                <img class="about_pics" src="./assets/img/left-pic.webp" alt="about_pics" />
               </div>
             </div>
           </div>
-          <div class="column column-lg-6 column-xl-4">
-            <div class="row">
-              <div class="column column-md-6 column-lg-12" data-aos="fade-up" data-aos-duration="1000">
-                <div class="card half-card explore_card card--1x hover">
-                  <div class="img_box">
-                    <img class="card-img" src="./assets/img/service-2.jpg" alt="game_image" />
-                  </div>
-                  <div class="card-caption d-flex sp-btwn">
-                    <div class="explore_card-caption-box">
-                      <h2 class="prgph">Service</h2>
-                      <h2 class="mini-h2">Currency Converter</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="column column-md-6 column-lg-12" data-aos="fade-up" data-aos-duration="1000">
-                <div class="card half-card explore_card card--1x hover">
-                  <div class="img_box">
-                    <img class="card-img" src="./assets/img/service-3.jpeg" alt="card image" />
-                  </div>
-                  <div class="card-caption d-flex sp-btwn">
-                    <div class="explore_card-caption-box">
-                      <h2 class="prgph">Service</h2>
-                      <h2 class="mini-h2">Connect Wallet</h2>
-                    </div>
-                  </div>
-                </div>
+          <div class="col-lg-6">
+            <div class="card about_card-text m-lg-5" data-aos="fade-left" data-aos-duration="1000">
+              <h2 class="fnt-xs">About Us</h2>
+              <h2 class="h2">
+                We are a global organization serving a global audience
+              </h2>
+              <h3 class="h3-sub">
+                The team of subject matter experts at JARR Exchange delivers
+                reliable and relevant content to both individuals and
+                businesses, driven by the mission to inform global communities
+                about the ever-evolving concept of money in the new digital era.
+              </h3>
+              <p class="prgph">
+                JARR Exchange's Currency and Cryptocurrency Converter determines
+                the exchange rates between major fiat currencies and
+                cryptocurrencies.
+              </p>
+              <div class="about_content_btn">
+                <a class="about_content_btn-main btn text-white btn-color" href="#converterTab">Convert Now</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="overlay--mid p-absolute"></div>
-  </div>
 
-  <!-- Converter Tab -->
-  <div class="container">
-    <ul class="nav nav-pills nav-fill" id="converterTab">
-        <li class="nav-item">
-            <a href="#currency" class="nav-link active" data-bs-toggle="tab">Currency Converter</a>
-        </li>
-        <li class="nav-item">
-            <a href="#cryptocurrency" class="nav-link" data-bs-toggle="tab">Cryptocurrency Converter</a>
-        </li>
-    </ul>
-    <div class="tab-content">
-        <div class="tab-pane fade show active" id="currency">
-            <!-- Converter -->
-            <div class="container">
-            <div class="row justify-content-center p-2">
-              <h1 class="title pb-2 col-12 text-center">
-                <strong>Currency Converter</strong>
-              </h1>
-              <div class="title-border col-12"></div>
-            </div>
-            <div class="container">
-              <div class="row unit-converter-container justify-content-center rounded p-5">
-                <div class="form-group col-12">
-                  <div class="d-flex align-items-center mb-5">
-                    <select class="form-control" id="from-currency-select"></select>
+    <section id="explore">
+        <div class="container">
+          <div class="text-center section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="fnt-xs">Services</h2>
+            <h2 class="h2">Explore Our Services</h2>
+            <p class="prgph">We integrate real economy into the digital one.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row" href="#converter">
+                <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="card card-2 half-card explore_card card--1x hover">
+                      <div class="img_box">
+                        <img class="card-img card-img--big" src="./assets/img/service-1.webp" alt="game_image" />
+                      </div>
+                      <div class="card-caption d-flex justify-content-between align-items-center">
+                        <div class="explore_card-caption-box">
+                          <h2 class="prgph">Service</h2>
+                          <h2 class="mini-h2"><a onclick="location.href='#converterTab'; document.getElementById('cryptoconvertTab').click();">Cryptocurrency Converter</a></h2>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping">Convert</span>
-                    <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
-                      aria-describedby="addon-wrapping" id="amount">
-                  </div>
-                  <script>
-                    $(function () {
-                      $("#from-currency-select").select2();
-                    });
-                  </script>
                 </div>
-        
-                <div></div>
-                <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="convert">
-                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-                  <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
-                    style="width:50px;height:50px">
-                  </lord-icon>
-                </button>
-        
-                <div class="col-12">
-                  <div class="form-group">
-                    <div class="d-flex align-items-center mb-5">
-                      <select class="form-control" name="" id="to-currency-select"></select>
+                <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="card card-2 half-card explore_card card--1x hover">
+                    <div class="img_box">
+                      <img class="card-img card-img--big" src="./assets/img/service-1.webp" alt="game_image" />
                     </div>
-                    <script>
-                      $(function () {
-                        $("#to-currency-select").select2();
-                      });
-                    </script>
+                    <div class="card-caption d-flex justify-content-between align-items-center">
+                      <div class="explore_card-caption-box">
+                        <h2 class="prgph">Service</h2>
+                        <h2 class="mini-h2"><a onclick="location.href='#articles'">Finance News and Updates</a></h2>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="unitprice d-flex justify-content-between align-items-center">
-                  <h3 class="pb-2"><strong id="result"></strong></h3>
-                  <h5 id="second-rate-unit"></h5>
+              </div>
+              
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="card half-card explore_card card--1x hover">
+                    <div class="img_box">
+                      <img class="card-img" src="./assets/img/service-2.jpg" alt="game_image" />
+                    </div>
+                    <div class="card-caption d-flex justify-content-between align-items-center">
+                      <div class="explore_card-caption-box">
+                        <h2 class="prgph">Service</h2>
+                        <h2 class="mini-h2"><a onclick="location.href='#converterTab'; document.getElementById('currencyconvertTab').click();">Currency Converter</a></h2>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="textBelow" id="first-rate-unit"></div>
+                <div class="col-md-6 col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="card half-card explore_card card--1x hover">
+                    <div class="img_box">
+                      <img class="card-img" src="./assets/img/service-3.jpeg" alt="card image" />
+                    </div>
+                    <div class="card-caption d-flex justify-content-between align-items-center">
+                      <div class="explore_card-caption-box">
+                        <h2 class="prgph">Service</h2>
+                        <h2 class="mini-h2"><a onclick='connectWallet()'>Wallet Integration</a></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="cryptocurrency" >  
-            <!-- Crypto Converter -->
-            <div class="container">
+    </section>
+
+    <!-- Converter Tab -->
+    <section id="converterTab">
+      <div class="container">
+        <ul class="nav nav-pills nav-fill" id="converterTab">
+            <li class="nav-item">
+                <a href="#currency" class="nav-link active" data-bs-toggle="tab" id="currencyconvertTab">Currency Converter</a>
+            </li>
+            <li class="nav-item">
+                <a href="#cryptocurrency" class="nav-link" data-bs-toggle="tab" id="cryptoconvertTab">Cryptocurrency Converter</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="currency">
+                <!-- Converter -->
+                <div class="container">
                 <div class="row justify-content-center p-2">
                 <h1 class="title pb-2 col-12 text-center">
-                    <strong>Cryptocurrency Converter</strong>
+                    <strong>Currency Converter</strong>
                 </h1>
                 <div class="title-border col-12"></div>
                 </div>
@@ -244,24 +207,12 @@
                 <div class="row unit-converter-container justify-content-center rounded p-5">
                     <div class="form-group col-12">
                     <div class="d-flex align-items-center mb-5">
-                        <select class="form-control" id="from-cryptocurrency-select">
-                            <option value="btc-bitcoin">BTC - Bitcoin</option>
-                            <option value="eth-ethereum">ETH - Ethereum</option>
-                            <option value="usdt-tether">USDT - Tether</option>
-                            <option value="bnb-binance-coin">BNB - Binance Coin</option>
-                            <option value="usdc-usd-coin">USDC - USD Coin</option>
-                            <option value="xrp-xrp">XRP - Ripple</option>
-                            <option value="ada-cardano">ADA - Cardano</option>
-                            <option value="matic-polygon">MATIC - Polygon</option>
-                            <option value="sol-solana">SOL - Solana</option>
-                            <option value="doge-dogecoin">DOGE - Dogecoin</option>
-                        </select>
-                        </select>
+                        <select class="form-control" id="from-currency-select"></select>
                     </div>
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping">Convert</span>
                         <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
-                        aria-describedby="addon-wrapping" id="crypto-amount">
+                        aria-describedby="addon-wrapping" id="amount">
                     </div>
                     <script>
                         $(function () {
@@ -269,30 +220,19 @@
                         });
                     </script>
                     </div>
-
+            
                     <div></div>
-                    <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="cryptoconvert">
+                    <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="convert">
                     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                     <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
                         style="width:50px;height:50px">
                     </lord-icon>
                     </button>
-
+            
                     <div class="col-12">
                     <div class="form-group">
                         <div class="d-flex align-items-center mb-5">
-                        <select class="form-control" name="" id="to-cryptocurrency-select">
-                            <option value="btc-bitcoin">BTC - Bitcoin</option>
-                            <option value="eth-ethereum">ETH - Ethereum</option>
-                            <option value="usdt-tether">USDT - Tether</option>
-                            <option value="bnb-binance-coin">BNB - Binance Coin</option>
-                            <option value="usdc-usd-coin">USDC - USD Coin</option>
-                            <option value="xrp-xrp">XRP - Ripple</option>
-                            <option value="ada-cardano">ADA - Cardano</option>
-                            <option value="matic-polygon">MATIC - Polygon</option>
-                            <option value="sol-solana">SOL - Solana</option>
-                            <option value="doge-dogecoin">DOGE - Dogecoin</option>
-                        </select>
+                        <select class="form-control" name="" id="to-currency-select"></select>
                         </div>
                         <script>
                         $(function () {
@@ -302,71 +242,146 @@
                     </div>
                     </div>
                     <div class="unitprice d-flex justify-content-between align-items-center">
-                    <h3 class="pb-2"><strong id="cryptoresult"></strong></h3>
-                    <h5 id="cryptoresultunit"></h5>
+                    <h3 class="pb-2"><strong id="result"></strong></h3>
+                    <h5 id="second-rate-unit"></h5>
                     </div>
-                    <div class="textBelow" id="crypto-rate"></div>
+                    <div class="textBelow" id="first-rate-unit"></div>
                 </div>
                 </div>
             </div>
-        </div>
-    </div>
-  </div>
+            </div>
+            <div class="tab-pane fade" id="cryptocurrency">  
+                <!-- Crypto Converter -->
+                <div class="container">
+                    <div class="row justify-content-center p-2">
+                    <h1 class="title pb-2 col-12 text-center">
+                        <strong>Cryptocurrency Converter</strong>
+                    </h1>
+                    <div class="title-border col-12"></div>
+                    </div>
+                    <div class="container">
+                    <div class="row unit-converter-container justify-content-center rounded p-5">
+                        <div class="form-group col-12">
+                        <div class="d-flex align-items-center mb-5">
+                            <select class="form-control" id="from-cryptocurrency-select">
+                                <option value="btc-bitcoin">BTC - Bitcoin</option>
+                                <option value="eth-ethereum">ETH - Ethereum</option>
+                                <option value="usdt-tether">USDT - Tether</option>
+                                <option value="bnb-binance-coin">BNB - Binance Coin</option>
+                                <option value="usdc-usd-coin">USDC - USD Coin</option>
+                                <option value="xrp-xrp">XRP - Ripple</option>
+                                <option value="ada-cardano">ADA - Cardano</option>
+                                <option value="matic-polygon">MATIC - Polygon</option>
+                                <option value="sol-solana">SOL - Solana</option>
+                                <option value="doge-dogecoin">DOGE - Dogecoin</option>
+                            </select>
+                            </select>
+                        </div>
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Convert</span>
+                            <input type="text" class="form-control" placeholder="Enter amount" aria-label="Username"
+                            aria-describedby="addon-wrapping" id="crypto-amount">
+                        </div>
+                        <script>
+                            $(function () {
+                            $("#from-currency-select").select2();
+                            });
+                        </script>
+                        </div>
 
-  <div class="outer p-relative">
-    <section id="articles">
-      <div class="container">
-        <div class="articles-txt txt-center section-title" data-aos="fade-up" data-aos-duration="1000">
-          <h2 class="fnt-xs">What's Trending?</h2>
-          <h2 class="h2">Latest Articles</h2>
-        </div>
-        <div class="row" data-aos="fade-up" data-aos-duration="1000">
-          <div class="column column-md-6 column-xl-4">
-            <div class="card articles_card half-card hover">
-              <div class="img_box">
-                <img class="card-img" src="./assets/img/articles-1.jpg" alt="card-image" />
-              </div>
-              <div class="card-caption">
-                <h2 class="mini-h2">
-                  Traders Bet on USD Coin Rebound as USDC Falls to 90 Cents
-                </h2>
-                <h2 class="prgph">Mar 11, 2023</h2>
-              </div>
+                        <div></div>
+                        <button class="button-convert btn d-flex justify-content-center align-items-center m-5" id="cryptoconvert">
+                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                        <lord-icon src="https://cdn.lordicon.com/rxufjlal.json" trigger="hover" colors="primary:#ffffff"
+                            style="width:50px;height:50px">
+                        </lord-icon>
+                        </button>
+
+                        <div class="col-12">
+                        <div class="form-group">
+                            <div class="d-flex align-items-center mb-5">
+                            <select class="form-control" name="" id="to-cryptocurrency-select">
+                                <option value="btc-bitcoin">BTC - Bitcoin</option>
+                                <option value="eth-ethereum">ETH - Ethereum</option>
+                                <option value="usdt-tether">USDT - Tether</option>
+                                <option value="bnb-binance-coin">BNB - Binance Coin</option>
+                                <option value="usdc-usd-coin">USDC - USD Coin</option>
+                                <option value="xrp-xrp">XRP - Ripple</option>
+                                <option value="ada-cardano">ADA - Cardano</option>
+                                <option value="matic-polygon">MATIC - Polygon</option>
+                                <option value="sol-solana">SOL - Solana</option>
+                                <option value="doge-dogecoin">DOGE - Dogecoin</option>
+                            </select>
+                            </div>
+                            <script>
+                            $(function () {
+                                $("#to-currency-select").select2();
+                            });
+                            </script>
+                        </div>
+                        </div>
+                        <div class="unitprice d-flex justify-content-between align-items-center">
+                        <h3 class="pb-2"><strong id="cryptoresult"></strong></h3>
+                        <h5 id="cryptoresultunit"></h5>
+                        </div>
+                        <div class="textBelow" id="crypto-rate"></div>
+                    </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="column column-md-6 column-xl-4">
-            <div class="card articles_card half-card hover">
-              <div class="img_box">
-                <img class="card-img" src="./assets/img/articles-2.jpg" alt="card-image" />
-              </div>
-              <div class="card-caption">
-                <h2 class="mini-h2">
-                  On-Chain Liquidations Beckon as Ether Slumps to 2-Month Low
-                </h2>
-                <h2 class="prgph">March 10, 2023</h2>
-              </div>
-            </div>
-          </div>
-          <div class="column column-md-6 column-xl-4">
-            <div class="card articles_card half-card hover">
-              <div class="img_box">
-                <img class="card-img" src="./assets/img/articles-3.jpg" alt="card-image" />
-              </div>
-              <div class="card-caption">
-                <h2 class="mini-h2">
-                  Zero-Knowledge Crypto Startup Proven Raises $15.8M in Seed
-                  Round
-                </h2>
-                <h2 class="prgph">March 9, 2023</h2>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <div class="overlay--mid p-absolute"></div>
-  </div>
+    <section id="articles">
+        <div class="container">
+          <div class="articles-txt text-center section-title" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="fnt-xs">What's Trending?</h2>
+            <h2 class="h2">Latest Articles</h2>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-md-6 col-xl-4">
+              <div class="card articles_card half-card hover">
+                <div class="img_box">
+                  <img class="card-img" src="./assets/img/articles-1.jpg" alt="card-image" />
+                </div>
+                <div class="card-caption">
+                  <h2 class="mini-h2">
+                    Traders Bet on USD Coin Rebound as USDC Falls to 90 Cents
+                  </h2>
+                  <h2 class="prgph">Mar 11, 2023</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card articles_card half-card hover">
+                <div class="img_box">
+                  <img class="card-img" src="./assets/img/articles-2.jpg" alt="card-image" />
+                </div>
+                <div class="card-caption">
+                  <h2 class="mini-h2">
+                    On-Chain Liquidations Beckon as Ether Slumps to 2-Month Low
+                  </h2>
+                  <h2 class="prgph">March 10, 2023</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="card articles_card half-card hover">
+                <div class="img_box">
+                  <img class="card-img" src="./assets/img/articles-3.jpg" alt="card-image" />
+                </div>
+                <div class="card-caption">
+                  <h2 class="mini-h2">
+                    Zero-Knowledge Crypto Startup Proven Raises $15.8M in Seed Round
+                  </h2>
+                  <h2 class="prgph">March 9, 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
 
   <footer id="footer" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
@@ -443,6 +458,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="currency.js"></script>
   <script src="cryptocurrency.js"></script>
+  <script src="metamask.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     window.onscroll = () => {
