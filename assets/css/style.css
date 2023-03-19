@@ -1679,8 +1679,22 @@ a.wallet-balance {
   background-color: #000000db;
 }
 
-.navbar .navbar-toggler-icon{
-  background-image: url(/assets/img/hamburger.png);
+.navbar .navbar-toggler-icon {
+  background-image: url(/assets/img/hamburger.png) !important;
 }
 
+.offcanvas.offcanvas-end {
+  width: 70% !important;
+}
 
+ul.navbar-nav.d-flex {
+  align-items: flex-end;
+}
+
+ul.sp-btwn {
+  justify-content: space-around;
+}
+
+.textBelow {
+  font-size: 12px;
+}
