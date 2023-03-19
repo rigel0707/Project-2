@@ -743,7 +743,7 @@ header .link-txt:hover {
 
 #navbar {
   height: 80px;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
@@ -751,13 +751,15 @@ header .link-txt:hover {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center; */
   position: fixed;
   top: 0;
   width: 100%;
   background: transparent;
   z-index: 999;
+  max-height: 80px;
 }
+
 
 #navbar.navbar--scroll {
   background: #5143f0;
@@ -1657,3 +1659,28 @@ a.wallet-balance {
   padding-bottom: 10px;
   padding-top: 5px;
 }
+
+.offcanvas {
+  --bs-offcanvas-bg: #5143f0;
+  --bs-body-bg:  #5143f0;
+}
+
+.navbar {
+  top: -27px;
+}
+
+#footerLogo {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+}
+
+.carousel-caption {
+  background-color: #000000db;
+}
+
+.navbar .navbar-toggler-icon{
+  background-image: url(/assets/img/hamburger.png);
+}
+
+
