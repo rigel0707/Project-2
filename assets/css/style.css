@@ -1680,6 +1680,7 @@ a.wallet-balance {
 }
 
 .navbar .navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url(/assets/img/hamburger.png) !important;
   background-image: url(/assets/img/hamburger.png) !important;
 }
 
