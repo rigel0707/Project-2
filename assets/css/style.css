@@ -1636,6 +1636,10 @@ html {
   color: #000 !important;
 }
 
+.select2-results__options{
+  color: #000 !important;
+}
+
 .select2-container{
   color: #000 !important;
 }
