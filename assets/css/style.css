@@ -143,9 +143,9 @@ html {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
-  color: #fff;
+  color: #fff !important;
 }
 
 span {
@@ -171,7 +171,7 @@ font-family: 'Quicksand', sans-serif;*/
 body {
   font-family: 'Quicksand';
   font-size: 16px;
-  color: #fff;
+  color: #fff !important;
 }
 
 .fnt-xs {
@@ -193,9 +193,9 @@ body {
 }
 
 .h2 {
-  font-size: 56px;
-  line-height: 64px;
-  margin-bottom: 30px;
+  font-size: 56px !important;
+  line-height: 64px !important;
+  margin-bottom: 30px !important;
 }
 
 .h3-sub {
@@ -743,7 +743,7 @@ header .link-txt:hover {
 
 #navbar {
   height: 80px;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
@@ -751,13 +751,15 @@ header .link-txt:hover {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center; */
   position: fixed;
   top: 0;
   width: 100%;
   background: transparent;
   z-index: 999;
+  max-height: 80px;
 }
+
 
 #navbar.navbar--scroll {
   background: #5143f0;
@@ -876,7 +878,7 @@ header .link-txt:hover {
 }
 
 .about_content_btn-main {
-  padding: 15px 30.32px 16px 30.68px;
+  padding: 15px 30.32px 16px 30.68px !important;
 }
 
 #about img {
@@ -1402,9 +1404,9 @@ footer a.prgph:hover,
 }
 
 .btn {
-  font-size: 14px;
-  border: 1px solid #ffffff80;
-  border-radius: 5px;
+  font-size: 14px !important;
+  border: 1px solid #ffffff80 !important;
+  border-radius: 5px !important;
 }
 
 .btn:hover {
@@ -1414,10 +1416,20 @@ footer a.prgph:hover,
 .btn-solid,
 .btn-solid-pink {
   padding: 16px 37px;
-  background-color: #bf3f89;
+  background-color: #bf3f89 !important;
   border-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.btn-solid.disconnect-wallet{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.connect-wallet{
+  color: white !important;
+  border: none !important;
 }
 
 .btn-solid:hover {
@@ -1547,7 +1559,7 @@ footer a.prgph:hover,
 
 .card {
   width: 100%;
-  /* max-width: 570px; */
+  max-width: 570px;
   margin: 0 auto;
   border-radius: 12px;
 }
@@ -1594,3 +1606,118 @@ html {
 .mb-30 {
   margin-bottom: 30px;
 }
+
+/* Converter */
+.background{
+  background-color: #070336;
+}
+
+.title{
+  color: white;
+}   
+
+.title-border{
+  width: 70px !important;
+  border-bottom: 4px solid 
+  #b63488;
+}
+
+.unit-converter-container{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.unitprice{
+  border-bottom: 4px solid 
+  #b63488;
+}
+
+.textBelow{
+  color: rgb(167, 167, 167);
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #b63488 !important;
+}
+
+.selection{
+  width: 100% !important;
+}
+
+.select2{
+  width: 100% !important;
+}
+
+.select2-results__options{
+  color: #000 !important;
+}
+
+.button-convert{
+  color: white !important;
+  width: 75px !important;
+  height: 75px !important;
+  border-radius: 50% !important;
+  background-color: #07ced4 !important;
+  border-width: 2px !important;
+}
+
+.card {
+  --bs-card-border-color: #00000000 !important;
+  --bs-card-bg: #00000000 !important;
+}
+.h2 {
+  color : #fff !important;
+  font-weight: 300 !important;
+}
+
+.dropdown-menu {
+  --bs-dropdown-bg: #120850 !important;
+  --bs-dropdown-padding-x: 0.75rem !important;
+}
+
+a.wallet-balance {
+  font-size: 15px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.offcanvas {
+  --bs-offcanvas-bg: #5143f0;
+  --bs-body-bg:  #5143f0;
+}
+
+.navbar {
+  top: -27px;
+}
+
+#footerLogo {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+}
+
+.carousel-caption {
+  background-color: #000000db;
+}
+
+.navbar {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3Csvg style='color: white' height='32px' id='Layer_1' version='1.1' viewBox='0 0 32 32' width='32px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z' fill='white'%3E%3C/path%3E%3C/svg%3E") !important;
+}
+
+.offcanvas.offcanvas-end {
+  width: 70% !important;
+}
+
+ul.navbar-nav.d-flex {
+  align-items: flex-end;
+}
+
+ul.sp-btwn {
+  justify-content: space-around;
+}
+
+.textBelow {
+  font-size: 12px;
+}
+
+
