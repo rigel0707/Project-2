@@ -1427,6 +1427,11 @@ footer a.prgph:hover,
   padding-bottom: 1px;
 }
 
+.connect-wallet{
+  color: white !important;
+  border: none !important;
+}
+
 .btn-solid:hover {
   background-color: #6357F6;
 }
@@ -1631,20 +1636,19 @@ html {
   color: rgb(167, 167, 167);
 }
 
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #b63488 !important;
+}
+
 .selection{
   width: 100% !important;
-  color: #000 !important;
+}
+
+.select2{
+  width: 100% !important;
 }
 
 .select2-results__options{
-  color: #000 !important;
-}
-
-.select2-container{
-  color: #000 !important;
-}
-
-.select {
   color: #000 !important;
 }
 
